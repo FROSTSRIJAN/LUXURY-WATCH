@@ -893,6 +893,7 @@ async function initialize() {
     
     initializeKeyboardAccessibility();
     initializePerformanceOptimizations();
+    initializeMobileOptimizations();
     updateLoadingProgress(95, 'Ready to launch...');
     
     // Event listeners
@@ -972,3 +973,199 @@ window.WatchCollection = {
   closeModal,
   CONFIG
 };
+
+// ========================================
+// MOBILE OPTIMIZATIONS
+// ========================================
+
+/**
+ * Mobile-specific optimizations and touch handlers
+ */
+function initializeMobileOptimizations() {
+  console.log('📱 Initializing mobile optimizations...');
+  
+  // Detect mobile device
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  
+  if (isMobile || isTouch) {
+    document.body.classList.add('mobile-device');
+    console.log('📱 Mobile device detected');
+    
+    // Optimize video autoplay for mobile
+    DOM.allVideos.forEach(video => {
+      // Disable autoplay on mobile to save bandwidth
+      video.removeAttribute('autoplay');
+      video.muted = true;
+      video.playsInline = true;
+      
+      // Add touch controls
+      video.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        if (video.paused) {
+          video.play().catch(console.warn);
+        } else {
+          video.pause();
+        }
+      });
+    });
+    
+    // Add mobile-friendly hover effects using touch
+    const watchCards = document.querySelectorAll('.watch-card');
+    watchCards.forEach(card => {
+      card.addEventListener('touchstart', () => {
+        card.classList.add('touch-active');
+      });
+      
+      card.addEventListener('touchend', () => {
+        setTimeout(() => {
+          card.classList.remove('touch-active');
+        }, 150);
+      });
+    });
+    
+    // Optimize smooth scrolling for mobile
+    if (CSS.supports('scroll-behavior', 'smooth')) {
+      document.documentElement.style.scrollBehavior = 'smooth';
+    }
+    
+    // Add mobile navigation toggle if needed
+    addMobileNavigationEnhancements();
+    
+    // Optimize loading screen for mobile
+    optimizeLoadingScreenForMobile();
+    
+    // Handle mobile video interactions
+    handleMobileVideoInteractions();
+  }
+  
+  // Add orientation change handler
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+      window.scrollTo(0, window.scrollY + 1);
+      window.scrollTo(0, window.scrollY - 1);
+    }, 100);
+  });
+  
+  console.log('✅ Mobile optimizations initialized');
+}
+
+/**
+ * Add mobile navigation enhancements
+ */
+function addMobileNavigationEnhancements() {
+  const nav = document.querySelector('.nav-links');
+  if (!nav) return;
+  
+  // Add smooth scroll to sections on mobile
+  nav.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      const targetId = e.target.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  });
+}
+
+/**
+ * Optimize loading screen for mobile devices
+ */
+function optimizeLoadingScreenForMobile() {
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen && window.innerWidth <= 768) {
+    // Add mobile-specific loading optimizations
+    loadingScreen.style.fontSize = '14px';
+    
+    const progressBar = loadingScreen.querySelector('.progress');
+    if (progressBar) {
+      progressBar.style.height = '3px';
+    }
+  }
+}
+
+/**
+ * Enhanced mobile video handling
+ */
+function handleMobileVideoInteractions() {
+  DOM.allVideos.forEach((video, index) => {
+    // Add loading indicator for mobile
+    const loadingIndicator = document.createElement('div');
+    loadingIndicator.className = 'video-loading-mobile';
+    loadingIndicator.innerHTML = '⏳ Loading video...';
+    loadingIndicator.style.cssText = `
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      background: rgba(0,0,0,0.8);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      display: none;
+      z-index: 10;
+    `;
+    
+    video.parentElement.style.position = 'relative';
+    video.parentElement.appendChild(loadingIndicator);
+    
+    // Show loading indicator when video starts loading
+    video.addEventListener('loadstart', () => {
+      loadingIndicator.style.display = 'block';
+    });
+    
+    // Hide loading indicator when video is ready
+    video.addEventListener('canplaythrough', () => {
+      loadingIndicator.style.display = 'none';
+    });
+    
+    // Add play button overlay for mobile
+    const playButton = document.createElement('div');
+    playButton.className = 'mobile-play-button';
+    playButton.innerHTML = '▶️';
+    playButton.style.cssText = `
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      color: #fff;
+      background: rgba(0,0,0,0.6);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.3s ease;
+    `;
+    
+    video.parentElement.appendChild(playButton);
+    
+    // Hide play button when video starts playing
+    video.addEventListener('play', () => {
+      playButton.style.display = 'none';
+    });
+    
+    // Show play button when video is paused
+    video.addEventListener('pause', () => {
+      playButton.style.display = 'flex';
+    });
+    
+    // Handle play button click
+    playButton.addEventListener('click', () => {
+      video.play().catch(console.warn);
+    });
+  });
+}
