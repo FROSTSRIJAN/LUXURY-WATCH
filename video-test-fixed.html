@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Video Test</title>
+    <style>
+        body { 
+            background: black; 
+            color: white; 
+            padding: 20px; 
+            font-family: Arial, sans-serif;
+        }
+        video { 
+            width: 100%; 
+            max-width: 400px; 
+            margin: 20px 0; 
+            border: 2px solid gold;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 10px;
+        }
+        .error { color: red; }
+        .success { color: lime; }
+        h1 { color: gold; }
+        h2 { color: #d4af37; }
+    </style>
+</head>
+<body>
+    <h1>🎬 FIXED VIDEO PATHS TEST</h1>
+    
+    <div class="test-section">
+        <h2>🏆 Hero Video Test</h2>
+        <video controls autoplay muted>
+            <source src="video-assets/rolex-submariner.mp4" type="video/mp4">
+            Video not supported
+        </video>
+    </div>
+    
+    <div class="test-section">
+        <h2>💎 Luxury Watch Ad Test</h2>
+        <video controls autoplay muted>
+            <source src="video-assets/luxury-watch-ad.mp4" type="video/mp4">
+            Video not supported
+        </video>
+    </div>
+    
+    <div class="test-section">
+        <h2>⌚ Custom Hand Video Test</h2>
+        <video controls autoplay muted>
+            <source src="custom-hand-videos/watchhand1.mp4" type="video/mp4">
+            Video not supported
+        </video>
+    </div>
+    
+    <div class="test-section">
+        <h2>🏎️ Porsche Video Test</h2>
+        <video controls autoplay muted>
+            <source src="porsche-car-video/porsche-panamera.mp4" type="video/mp4">
+            Video not supported
+        </video>
+    </div>
+
+    <div id="results"></div>
+
+    <script>
+        // Test all videos and show results
+        const videos = document.querySelectorAll('video');
+        const results = document.getElementById('results');
+        let loadedCount = 0;
+        let errorCount = 0;
+        
+        results.innerHTML = '<h2>📊 Test Results:</h2>';
+        
+        videos.forEach((video, index) => {
+            const section = video.closest('.test-section');
+            const title = section.querySelector('h2').textContent;
+            
+            video.addEventListener('loadeddata', () => {
+                loadedCount++;
+                console.log(`✅ ${title} loaded successfully`);
+                section.insertAdjacentHTML('beforeend', '<p class="success">✅ Video loaded and ready to play!</p>');
+                updateResults();
+            });
+            
+            video.addEventListener('error', (e) => {
+                errorCount++;
+                console.error(`❌ ${title} failed to load:`, e);
+                section.insertAdjacentHTML('beforeend', '<p class="error">❌ Video failed to load!</p>');
+                updateResults();
+            });
+            
+            // Try to play
+            video.play().catch(err => {
+                console.log('Autoplay blocked for:', title);
+                section.insertAdjacentHTML('beforeend', '<p style="color: orange;">⚠️ Autoplay blocked - click to play</p>');
+            });
+        });
+        
+        function updateResults() {
+            results.innerHTML = `
+                <h2>📊 Test Results:</h2>
+                <p class="success">✅ Videos Loaded: ${loadedCount}/${videos.length}</p>
+                <p class="error">❌ Videos Failed: ${errorCount}/${videos.length}</p>
+                ${loadedCount === videos.length ? '<p class="success"><strong>🎉 ALL VIDEOS WORKING!</strong></p>' : ''}
+            `;
+        }
+    </script>
+</body>
+</html>

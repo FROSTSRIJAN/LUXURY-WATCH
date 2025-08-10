@@ -1,0 +1,134 @@
+{
+  "watches": [
+    {
+      "id": "rolex-submariner",
+      "name": "Rolex Submariner",
+      "price": "₹9,50,000",
+      "color": "Black Dial",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch1.mp4",
+      "specs": ["41mm", "Automatic", "300m water resistant"],
+      "description": "The legendary diving watch that defines underwater timekeeping excellence."
+    },
+    {
+      "id": "omega-speedmaster",
+      "name": "Omega Speedmaster",
+      "price": "₹6,75,000",
+      "color": "Moonwatch Black",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch2.mp4",
+      "specs": ["42mm", "Manual Wind", "Moon Landing Legacy"],
+      "description": "The first watch worn on the moon, engineered for space exploration."
+    },
+    {
+      "id": "patek-philippe-nautilus",
+      "name": "Patek Philippe Nautilus",
+      "price": "₹32,50,000",
+      "color": "Steel Blue",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch3.mp4",
+      "specs": ["40mm", "Automatic", "Luxury Sport"],
+      "description": "The ultimate expression of luxury sports watchmaking."
+    },
+    {
+      "id": "audemars-piguet-royal-oak",
+      "name": "Audemars Piguet Royal Oak",
+      "price": "₹28,75,000",
+      "color": "Black Tapisserie",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch4.mp4",
+      "specs": ["41mm", "Automatic", "Octagonal Bezel"],
+      "description": "Revolutionary design that redefined luxury watch aesthetics."
+    },
+    {
+      "id": "lange-1",
+      "name": "A. Lange & Söhne Lange 1",
+      "price": "₹42,00,000",
+      "color": "White Gold",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch1.mp4",
+      "specs": ["38.5mm", "Manual Wind", "German Excellence"],
+      "description": "The pinnacle of German watchmaking precision and artistry."
+    },
+    {
+      "id": "richard-mille-rm11",
+      "name": "Richard Mille RM 11-03",
+      "price": "₹1,15,00,000",
+      "color": "Carbon TPT",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch2.mp4",
+      "specs": ["49mm", "Automatic", "Racing Inspired"],
+      "description": "Formula 1 technology meets haute horlogerie innovation."
+    },
+    {
+      "id": "vacheron-constantin-overseas",
+      "name": "Vacheron Constantin Overseas",
+      "price": "₹18,50,000",
+      "color": "Blue Dial",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch3.mp4",
+      "specs": ["41mm", "Automatic", "Travel Time"],
+      "description": "Elegance for the global traveler with impeccable craftsmanship."
+    },
+    {
+      "id": "jaeger-lecoultre-reverso",
+      "name": "Jaeger-LeCoultre Reverso",
+      "price": "₹12,25,000",
+      "color": "Silver",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch4.mp4",
+      "specs": ["45mm", "Manual Wind", "Reversible Case"],
+      "description": "Art Deco masterpiece with iconic reversible design."
+    },
+    {
+      "id": "breitling-navitimer",
+      "name": "Breitling Navitimer",
+      "price": "₹4,85,000",
+      "color": "Black Steel",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch1.mp4",
+      "specs": ["41mm", "Automatic", "Pilot's Watch"],
+      "description": "The ultimate pilot's watch with aviation slide rule bezel."
+    },
+    {
+      "id": "iwc-pilot",
+      "name": "IWC Big Pilot",
+      "price": "₹8,75,000",
+      "color": "Black Dial",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch2.mp4",
+      "specs": ["46mm", "Automatic", "7-Day Power Reserve"],
+      "description": "Aviation heritage meets modern engineering excellence."
+    },
+    {
+      "id": "cartier-santos",
+      "name": "Cartier Santos",
+      "price": "₹5,95,000",
+      "color": "Steel & Gold",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch3.mp4",
+      "specs": ["39mm", "Automatic", "Square Case"],
+      "description": "The world's first modern wristwatch, now reimagined."
+    },
+    {
+      "id": "hublot-big-bang",
+      "name": "Hublot Big Bang",
+      "price": "₹11,50,000",
+      "color": "Ceramic Black",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch4.mp4",
+      "specs": ["44mm", "Automatic", "Fusion Materials"],
+      "description": "Bold fusion of materials and innovative design language."
+    },
+    {
+      "id": "tag-heuer-carrera",
+      "name": "TAG Heuer Carrera",
+      "price": "₹3,25,000",
+      "color": "Racing Green",
+      "image": "assets/header.png",
+      "video": "assets/videos/watch1.mp4",
+      "specs": ["41mm", "Automatic", "Chronograph"],
+      "description": "Racing heritage captured in timeless elegance."
+    }
+  ]
+}

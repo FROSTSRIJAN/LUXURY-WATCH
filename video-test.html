@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Test</title>
+    <style>
+        body { background: black; color: white; padding: 20px; }
+        video { width: 100%; max-width: 500px; margin: 20px 0; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Video Test Page</h1>
+    
+    <h2>Hero Video Test</h2>
+    <video controls>
+        <source src="video%20assests/The%20Rolex%20Submariner%20(1080p).mp4" type="video/mp4">
+        Video not supported
+    </video>
+    
+    <h2>Luxury Watch Ad Test</h2>
+    <video controls>
+        <source src="video%20assests/Luxury%20Watch%20Ad%20(720p).mp4" type="video/mp4">
+        Video not supported
+    </video>
+    
+    <h2>Custom Hand Video Test</h2>
+    <video controls>
+        <source src="custome%20hand%20video/watchhand1.mp4" type="video/mp4">
+        Video not supported
+    </video>
+    
+    <h2>Porsche Video Test</h2>
+    <video controls>
+        <source src="porsche%20car%20video/Freedom%20to%20express%20yourself%20the%20new%20PorschePanamera%204%20(1080p).mp4" type="video/mp4">
+        Video not supported
+    </video>
+
+    <script>
+        // Test all videos
+        const videos = document.querySelectorAll('video');
+        videos.forEach((video, index) => {
+            video.addEventListener('loadeddata', () => {
+                console.log(`Video ${index + 1} loaded successfully`);
+                video.parentElement.insertAdjacentHTML('afterend', '<p class="success">✅ Video loaded successfully!</p>');
+            });
+            
+            video.addEventListener('error', (e) => {
+                console.error(`Video ${index + 1} failed to load:`, e);
+                video.parentElement.insertAdjacentHTML('afterend', '<p class="error">❌ Video failed to load!</p>');
+            });
+        });
+    </script>
+</body>
+</html>

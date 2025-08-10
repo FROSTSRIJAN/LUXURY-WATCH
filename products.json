@@ -1,0 +1,134 @@
+{
+  "watches": [
+    {
+      "id": "chopard-201-carat",
+      "name": "Chopard 201-Carat Watch",
+      "price": "₹18,75,00,000",
+      "color": "Gold & Diamond",
+      "image": "assets/Chopard-201-Carat-Watch-25-Million.webp",
+      "video": "custom-hand-videos/watchhand1.mp4",
+      "specs": ["201 Carats", "Handcrafted", "Limited Edition", "Swiss Made"],
+      "description": "The most expensive watch in the world featuring 201 carats of colored diamonds in a stunning bracelet design."
+    },
+    {
+      "id": "franck-muller-aeternitas",
+      "name": "Franck Muller Aeternitas Mega 4",
+      "price": "₹20,25,00,000",
+      "color": "Rose Gold",
+      "image": "assets/Franck-Muller-Aeternitas-Mega-4-watch-2.7-Million.webp",
+      "video": "custom-hand-videos/watchhand2.mp4",
+      "specs": ["1483 Components", "Perpetual Calendar", "Minute Repeater", "Equation of Time"],
+      "description": "The world's most complicated wristwatch with 36 complications, representing the pinnacle of horological achievement."
+    },
+    {
+      "id": "hublot-big-bang-diamond",
+      "name": "Hublot Big Bang Diamond",
+      "price": "₹37,50,00,000",
+      "color": "White Gold & Diamond",
+      "image": "assets/Hublot-Big-Bang-Diamond-5-Million.webp",
+      "video": "video-assets/watchvideo1.mp4",
+      "specs": ["44mm", "18K White Gold", "1282 Diamonds", "Automatic"],
+      "description": "A masterpiece of luxury featuring over 1,282 diamonds totaling more than 40 carats."
+    },
+    {
+      "id": "patek-philippe-nautilus",
+      "name": "Patek Philippe Nautilus 5711",
+      "price": "₹45,00,000",
+      "color": "Steel Blue",
+      "image": "assets/patek-philippe-nautilus-ref-5711-1500A-children-auction.webp",
+      "video": "video-assets/rolex-daytona.mp4",
+      "specs": ["40mm", "Self-winding", "Stainless Steel", "120m Water Resistant"],
+      "description": "The most coveted sports watch in the world, with an iconic porthole design and blue dial."
+    },
+    {
+      "id": "patek-philippe-1527",
+      "name": "Patek Philippe Ref. 1527",
+      "price": "₹37,50,00,000",
+      "color": "Yellow Gold",
+      "image": "assets/patek-philippe-ref-1527.webp",
+      "video": "video-assets/rolex-submariner.mp4",
+      "specs": ["Perpetual Calendar", "Moon Phases", "Vintage 1943", "Yellow Gold"],
+      "description": "A rare vintage perpetual calendar chronograph, one of the most important watches ever created."
+    },
+    {
+      "id": "patek-philippe-6300a",
+      "name": "Patek Philippe Grandmaster Chime 6300A",
+      "price": "₹2,34,00,00,000",
+      "color": "Steel & Salmon",
+      "image": "assets/patek-philippe-ref-6300A-most-expensive-watch-in-the-world-1920x1920.webp",
+      "video": "video-assets/luxury-watch-ad.mp4",
+      "specs": ["20 Complications", "Minute Repeater", "Alarm", "Reversible Case"],
+      "description": "The most expensive watch ever sold at auction, featuring 20 complications in a unique steel case."
+    },
+    {
+      "id": "vintage-timepiece-1",
+      "name": "Vintage Luxury Heritage",
+      "price": "₹8,50,000",
+      "color": "Classic Brown",
+      "image": "assets/watch1.jpg",
+      "video": "custom-hand-videos/watchhand1.mp4",
+      "specs": ["42mm", "Manual Wind", "Leather Strap", "Vintage Design"],
+      "description": "A timeless classic featuring traditional craftsmanship and elegant vintage aesthetics."
+    },
+    {
+      "id": "sport-chronograph",
+      "name": "Professional Sport Chronograph",
+      "price": "₹6,75,000",
+      "color": "Steel & Black",
+      "image": "assets/watch2.jpg",
+      "video": "custom-hand-videos/watchhand2.mp4",
+      "specs": ["44mm", "Chronograph", "Ceramic Bezel", "200m Water Resistant"],
+      "description": "Built for performance with precision timing capabilities and robust construction."
+    },
+    {
+      "id": "elegant-dress-watch",
+      "name": "Elegant Dress Collection",
+      "price": "₹4,25,000",
+      "color": "Gold & White",
+      "image": "assets/watch3.jpg",
+      "video": "video-assets/watchvideo1.mp4",
+      "specs": ["40mm", "Ultra-thin", "Gold Case", "Dress Watch"],
+      "description": "Perfect for formal occasions with its refined design and exceptional finishing."
+    },
+    {
+      "id": "modern-innovation",
+      "name": "Modern Innovation Series",
+      "price": "₹9,90,000",
+      "color": "Titanium Gray",
+      "image": "assets/watch4.jpg",
+      "video": "video-assets/rolex-daytona.mp4",
+      "specs": ["45mm", "Titanium", "Smart Functions", "Solar Powered"],
+      "description": "Cutting-edge technology meets traditional watchmaking in this innovative timepiece."
+    },
+    {
+      "id": "luxury-heritage",
+      "name": "Heritage Luxury Edition",
+      "price": "₹12,75,000",
+      "color": "Rose Gold",
+      "image": "assets/watch5.jpg",
+      "video": "video-assets/rolex-submariner.mp4",
+      "specs": ["42mm", "Rose Gold", "Complications", "Swiss Movement"],
+      "description": "A celebration of horological heritage with modern complications and exceptional craftsmanship."
+    },
+    {
+      "id": "porsche-diesel-signature",
+      "name": "Porsche Diesel Signature",
+      "price": "₹15,50,000",
+      "color": "Carbon Black",
+      "image": "assets/pexels-sambecerra-12934247.jpg",
+      "video": "video-assets/luxury-watch-ad.mp4",
+      "specs": ["48mm", "Carbon Fiber", "Motorsport Inspired", "Limited Edition"],
+      "description": "The ultimate fusion of automotive excellence and horological precision, inspired by Porsche's racing heritage."
+    },
+    {
+      "id": "classic-elegance",
+      "name": "Classic Elegance Master",
+      "price": "₹7,25,000",
+      "color": "Silver & Blue",
+      "image": "assets/header.png",
+      "video": "custom-hand-videos/watchhand1.mp4",
+      "specs": ["41mm", "Automatic", "Sapphire Crystal", "Classic Design"],
+      "description": "Timeless elegance with modern reliability, perfect for the discerning collector."
+    }
+  ]
+}

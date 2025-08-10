@@ -1,51 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | Porsche</title>
-  </head>
-  <body>
-    <div class="container">
-      <nav>
-        <ul class="nav__links nav__left">
-          <li><a href="#" class="logo">Diesel</a></li>
-          <li><a href="#">Store</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Collection</a></li>
-        </ul>
-        <ul class="nav__links nav__right">
-          <li><a href="#">Cart</a></li>
-          <li><a href="#">Login/Register</a></li>
-          <li><a href="#">Profile</a></li>
-        </ul>
-      </nav>
-      <span class="letter-s">S</span>
-      <img src="assets/header.png" alt="header" />
-      <h4 class="text__left">POR</h4>
-      <h4 class="text__right">CHE</h4>
-      <button class="btn explore">EXPLORE MORE</button>
-      <button class="btn print">PRINT</button>
-      <button class="btn catalog">CATALOG</button>
-      <h5 class="feature-1">Diesel</h5>
-      <h5 class="feature-2">Watches</h5>
-      <h5 class="feature-3">Tough</h5>
-      <h5 class="feature-4">Modern</h5>
-      <footer class="footer">
-        <p>Copyright © 2024 Web Design Mastery. All rights reserved.</p>
-        <div class="footer__links">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche × Diesel | Cinematic Luxury Timepieces Collection</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <div style="color: #d4af37; font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 2rem; text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⌚</div>
+            PORSCHE × DIESEL
+            <div style="font-size: 1rem; color: #e5e4e2; margin-top: 0.5rem; letter-spacing: 3px;">LUXURY TIMEPIECES</div>
         </div>
-      </footer>
+        <div style="width: 200px; height: 4px; background: rgba(212, 175, 55, 0.2); border-radius: 2px; overflow: hidden;">
+            <div id="loading-progress" style="width: 0%; height: 100%; background: linear-gradient(90deg, #d4af37, #ffd700); transition: width 0.3s ease; border-radius: 2px;"></div>
+        </div>
+        <div id="loading-text" style="color: #e5e4e2; margin-top: 1rem; font-size: 0.9rem;">Loading luxury experience...</div>
     </div>
-    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="logo" id="logo">
+                <img src="assets/header.png" alt="Logo" class="logo-img">
+                <span class="brand-name">PORSCHE × DIESEL</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#featured">FEATURED</a></li>
+                <li><a href="#collection">COLLECTION</a></li>
+                <li><a href="#testimonials">STORIES</a></li>
+                <li><a href="#porsche">HERITAGE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Video Section -->
+    <section id="hero" class="hero-video-section">
+        <video class="hero-video" autoplay muted loop playsinline data-video>
+            <source src="video-assets/rolex-submariner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                LUXURY
+                <span class="hero-subtitle">REDEFINED</span>
+            </h1>
+            <p class="hero-tagline">WHERE PRECISION MEETS PASSION</p>
+            <a href="#collection" class="btn btn-hero">EXPLORE COLLECTION</a>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element element-1"></div>
+        <div class="floating-element element-2"></div>
+        <div class="floating-element element-3"></div>
+    </section>
+
+    <!-- Featured Product Videos Section -->
+    <section id="featured" class="product-videos-section">
+        <div class="container">
+            <h2 class="section-title">FEATURED MASTERPIECES</h2>
+            
+            <!-- Hero Featured Video -->
+            <div class="featured-video-container glass">
+                <video class="featured-video" autoplay muted loop playsinline data-video>
+                    <source src="video-assets/luxury-watch-ad.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay-text">
+                    <h3>Patek Philippe Grandmaster Chime</h3>
+                    <p>The pinnacle of horological excellence featuring 20 complications</p>
+                    <div class="price-tag">₹2,34,00,00,000</div>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="videos-grid">
+                <div class="video-card glass">
+                    <video class="grid-video" muted loop playsinline data-video>
+                        <source src="video-assets/rolex-daytona.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-overlay">
+                        <h4>Rolex Cosmograph Daytona</h4>
+                        <p>Precision chronograph engineering</p>
+                        <div class="video-price">₹45,00,000</div>
+                    </div>
+                </div>
+                
+                <div class="video-card glass">
+                    <video class="grid-video" muted loop playsinline data-video>
+                        <source src="video-assets/watchvideo1.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-overlay">
+                        <h4>Hublot Big Bang Diamond</h4>
+                        <p>1,282 diamonds in perfect harmony</p>
+                        <div class="video-price">₹37,50,00,000</div>
+                    </div>
+                </div>
+                
+                <div class="video-card glass">
+                    <video class="grid-video" muted loop playsinline data-video>
+                        <source src="custom-hand-videos/watchhand1.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-overlay">
+                        <h4>Chopard 201-Carat</h4>
+                        <p>The world's most expensive timepiece</p>
+                        <div class="video-price">₹18,75,00,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Collection Section -->
+    <section id="collection" class="collection-section">
+        <div class="container">
+            <h2 class="section-title">EXCLUSIVE COLLECTION</h2>
+            <p class="section-subtitle">Thirteen masterpieces that define luxury</p>
+            
+            <!-- Dynamic Watches Grid -->
+            <div id="watches-grid" class="watches-grid">
+                <!-- Watches will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">MASTER COLLECTORS</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass">
+                    <video class="testimonial-video" muted loop playsinline data-video>
+                        <source src="custom-hand-videos/watchhand1.mp4" type="video/mp4">
+                    </video>
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <h4>"Unparalleled Craftsmanship"</h4>
+                        <p>"The attention to detail in my Patek Philippe is extraordinary. Every element speaks to generations of horological mastery. This is not just a watch—it's a piece of history."</p>
+                        <div class="testimonial-author">
+                            <strong>Alessandro Rossi</strong>
+                            <span>Master Collector, Milano</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass">
+                    <video class="testimonial-video" muted loop playsinline data-video>
+                        <source src="custom-hand-videos/watchhand2.mp4" type="video/mp4">
+                    </video>
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <h4>"Beyond Luxury"</h4>
+                        <p>"My Chopard 201-Carat represents the pinnacle of jewelry watchmaking. The colored diamonds create a mesmerizing spectacle that captures light like captured starlight."</p>
+                        <div class="testimonial-author">
+                            <strong>Victoria Sterling</strong>
+                            <span>Luxury Connoisseur, London</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Heritage Section -->
+    <section class="brand-story-section">
+        <div class="container">
+            <div class="brand-story-content glass">
+                <h2 class="section-title">THE ART OF TIME</h2>
+                <p class="brand-story-text">
+                    "Where Porsche's racing heritage meets horological excellence, 
+                    we create timepieces that capture the essence of speed, precision, 
+                    and uncompromising quality. Each watch is a testament to the 
+                    relentless pursuit of perfection."
+                </p>
+                <div class="heritage-stats">
+                    <div class="stat">
+                        <div class="stat-number">1875</div>
+                        <div class="stat-label">Founded</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">13</div>
+                        <div class="stat-label">Masterpieces</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Precision</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Porsche Finale Section -->
+    <section id="porsche" class="porsche-finale-section">
+        <video class="porsche-video" autoplay muted loop playsinline data-video>
+            <source src="porsche-car-video/porsche-panamera.mp4" type="video/mp4">
+        </video>
+        <div class="porsche-overlay">
+            <div class="porsche-content">
+                <h2 class="porsche-title">PORSCHE HERITAGE</h2>
+                <p class="porsche-tagline">Freedom to Express Yourself</p>
+                <a href="#collection" class="btn btn-porsche">DISCOVER LEGACY</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-watch-image" src="" alt="">
+                    <video id="modal-watch-video" muted loop playsinline style="display: none;">
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-watch-name"></h3>
+                    <p class="modal-price" id="modal-watch-price"></p>
+                    <p class="modal-color">Color: <span id="modal-watch-color"></span></p>
+                    <div class="modal-specs" id="modal-watch-specs"></div>
+                    <p class="modal-description" id="modal-watch-description"></p>
+                    <button class="btn btn-modal">INQUIRE NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer glass">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p>&copy; 2024 Porsche × Diesel. Crafted for Excellence.</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon">📱</a>
+                <a href="#" class="social-icon">📧</a>
+                <a href="#" class="social-icon">🌐</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div class="bg-element bg-1"></div>
+        <div class="bg-element bg-2"></div>
+        <div class="bg-element bg-3"></div>
+    </div>
+
+    <!-- JavaScript -->
     <script src="main.js"></script>
-  </body>
+</body>
 </html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche × Diesel Luxury Timepieces</title>
+    <!-- Google Fonts: Playfair Display & Noto Sans JP -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Preload hero video for instant play -->
+    <link rel="preload" href="assets/videos/watch1.mp4" as="video" type="video/mp4">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="logo" id="logo">
+            <img src="assets/header.png" alt="Porsche × Diesel Logo" class="logo-img" />
+            <span class="brand-name">Porsche × Diesel</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#testimonials">Stories</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cinematic Hero Section with Fullscreen Video -->
+    <section class="hero-video-section" id="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="assets/videos/watch1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Porsche × Diesel<br><span class="hero-subtitle">Luxury Timepieces</span></h1>
+            <p class="hero-tagline">Precision. Legacy. Innovation.</p>
+            <a href="#collection" class="btn btn-hero">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Featured Product Videos Section -->
+    <section class="product-videos-section" id="videos">
+        <div class="container">
+            <h2 class="section-title">Cinematic Excellence</h2>
+            
+            <!-- Large Featured Video -->
+            <div class="featured-video-container">
+                <video class="featured-video" muted loop data-video="featured">
+                    <source src="assets/videos/watch1.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay-text">
+                    <h3>Rolex Submariner</h3>
+                    <p>Legendary Precision</p>
+                </div>
+            </div>
+
+            <!-- Smaller Videos Grid -->
+            <div class="videos-grid">
+                <div class="video-card" data-video="grid">
+                    <video class="grid-video" muted loop>
+                        <source src="assets/videos/watch2.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-overlay">
+                        <h4>Omega Speedmaster</h4>
+                        <p>Moon Landing Legacy</p>
+                    </div>
+                </div>
+                <div class="video-card" data-video="grid">
+                    <video class="grid-video" muted loop>
+                        <source src="assets/videos/watch3.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-overlay">
+                        <h4>Patek Philippe</h4>
+                        <p>Luxury Redefined</p>
+                    </div>
+                </div>
+                <div class="video-card" data-video="grid">
+                    <video class="grid-video" muted loop>
+                        <source src="assets/videos/watch4.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-overlay">
+                        <h4>Audemars Piguet</h4>
+                        <p>Revolutionary Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Watches Collection -->
+    <section class="collection-section" id="collection">
+        <div class="container">
+            <h2 class="section-title">Luxury Collection</h2>
+            <div class="watches-grid" id="watches-grid">
+                <!-- Dynamically loaded from products.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials with Videos -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Stories</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass">
+                    <video class="testimonial-video" muted data-video="testimonial">
+                        <source src="assets/customer_hand_video/customer1.mp4" type="video/mp4">
+                    </video>
+                    <div class="testimonial-content">
+                        <h4>Arjun Mehta</h4>
+                        <p>"Exceptional craftsmanship that exceeds every expectation. A true masterpiece."</p>
+                    </div>
+                </div>
+                <div class="testimonial-card glass">
+                    <video class="testimonial-video" muted data-video="testimonial">
+                        <source src="assets/customer_hand_video/customer2.mp4" type="video/mp4">
+                    </video>
+                    <div class="testimonial-content">
+                        <h4>Priya Sharma</h4>
+                        <p>"The perfect fusion of luxury and precision. Simply breathtaking."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section class="brand-story-section">
+        <div class="container">
+            <div class="brand-story-content glass">
+                <p class="brand-story-text">
+                    "From the depths of the ocean to the fast lanes of the Autobahn, our timepieces are engineered for those who master time."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Porsche Brand Finale Video -->
+    <section class="porsche-finale-section">
+        <video class="porsche-video" autoplay muted loop playsinline>
+            <source src="assets/videos/porsche.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="porsche-overlay">
+            <div class="porsche-content">
+                <h2 class="porsche-title">The Drive of Time</h2>
+                <a href="#collection" class="btn btn-porsche">Pre-order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content glass">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-watch-image" src="" alt="">
+                    <video id="modal-watch-video" muted loop style="display: none;">
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-watch-name"></h3>
+                    <p id="modal-watch-price" class="modal-price"></p>
+                    <p id="modal-watch-color" class="modal-color"></p>
+                    <div id="modal-watch-specs" class="modal-specs"></div>
+                    <p id="modal-watch-description" class="modal-description"></p>
+                    <button class="btn btn-modal">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-parallax"></div>
+    <div class="hero-content">
+      <div class="hero-watch-container">
+        <img src="assets/header.png" alt="Diesel Porsche Watch" class="hero-watch" id="hero-watch">
+      </div>
+      <div class="hero-text">
+        <h1 class="luxury-title">Unleash Time. <span class="gradient-text">Drive Legacy.</span></h1>
+        <p class="luxury-subtitle">The Diesel Porsche Watch — Where Precision Meets Power</p>
+        <a href="#preorder" class="btn btn-glass btn-hero">Pre-order Now</a>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Featured Collections Section -->
+    <section class="collections-section" id="collections">
+      <h2 class="section-title">Featured Collections</h2>
+      <div class="collections-slider">
+        <div class="collections-grid">
+          <div class="collection-card">
+            <img src="assets/header.png" alt="Chrono Gold" class="collection-watch" />
+            <div class="collection-tagline">Chrono Gold — Timeless Brilliance</div>
+          </div>
+          <div class="collection-card">
+            <img src="assets/header.png" alt="Night Racer" class="collection-watch" />
+            <div class="collection-tagline">Night Racer — Bold After Dark</div>
+          </div>
+          <div class="collection-card">
+            <img src="assets/header.png" alt="Steel Spirit" class="collection-watch" />
+            <div class="collection-tagline">Steel Spirit — Pure Performance</div>
+          </div>
+          <div class="collection-card">
+            <img src="assets/header.png" alt="Carbon Shadow" class="collection-watch" />
+            <div class="collection-tagline">Carbon Shadow — Modern Icon</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Brand Story / Video Section -->
+    <section class="story-video-section" id="story-video">
+      <div class="story-video-content">
+        <div class="story-video-text">
+          <h2 class="section-title">Porsche × Diesel: The Story</h2>
+          <p class="story-text">Where German engineering meets Italian design. Discover the journey behind the Diesel Porsche Watch — a fusion of speed, luxury, and innovation, inspired by the world’s most iconic cars.</p>
+          <a href="#full-story-video" class="btn btn-glow btn-story">Play Full Story</a>
+        </div>
+        <div class="story-video-bg">
+          <video class="brand-video" src="assets/porsche-story.mp4" autoplay loop muted playsinline></video>
+          <div class="video-overlay"></div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Cinematic Porsche Video Section -->
+    <section class="cinematic-video-section" id="full-story-video">
+      <div class="cinematic-video-wrapper">
+        <video class="cinematic-video" src="assets/porsche-cinematic.mp4" autoplay loop muted playsinline></video>
+        <div class="cinematic-overlay">
+          <h2 class="cinematic-title">Experience the Legend</h2>
+        </div>
+      </div>
+    </section>
+
+  <!-- Features Section -->
+  <section class="features-section glass" id="features">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><span>⏱️</span></div>
+        <h3>Swiss Movement</h3>
+        <p>Unmatched accuracy and reliability for every second.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><span>💎</span></div>
+        <h3>Sapphire Glass</h3>
+        <p>Scratch-resistant, crystal-clear, and built to last.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><span>⚡</span></div>
+        <h3>Neon Lume</h3>
+        <p>Futuristic glow for night-time adventures.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><span>🚗</span></div>
+        <h3>Porsche DNA</h3>
+        <p>Inspired by the iconic Porsche dashboard and racing heritage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section parallax-bg" id="story">
+    <div class="story-overlay glass">
+      <h2 class="section-title">The Story</h2>
+      <p class="story-text">Born from the spirit of racing, the Diesel Porsche Watch fuses German engineering with Italian design. Every detail echoes the legacy of speed, luxury, and innovation.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section neon-gradient" id="preorder">
+    <h2 class="cta-title">Ready to Own the Legend?</h2>
+    <a href="#" class="btn btn-glow btn-cta">Pre-order Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer glass">
+    <div class="footer-content">
+      <span class="footer-brand">&copy; 2025 Diesel Porsche</span>
+      <div class="footer-social">
+        <a href="#" class="social-icon" aria-label="Instagram"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Twitter"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4 1s-4.18 1.64-6.29 2.34C13.09 2.36 11.5 2 10 2c-4.42 0-8 3.58-8 8 0 .39.04.77.09 1.14C1.67 11.09 1 12.5 1 14c0 2.21 1.79 4 4 4h14c2.21 0 4-1.79 4-4 0-1.5-.67-2.91-1.09-4.14.05-.37.09-.75.09-1.14 0-4.42-3.58-8-8-8z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Facebook"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a4 4 0 0 0-4 4v3H7v4h4v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
